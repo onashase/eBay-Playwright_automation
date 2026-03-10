@@ -8,7 +8,7 @@ import org.testng.asserts.SoftAssert;
 
 public class eBayRelatedProductsTest extends TestBase {
 
-    @Test
+    @Test(description = "TC_001")
     public void verifySimilarProductsAreDisplayed() {
         SoftAssert softAssert = new SoftAssert();
         Product.navigateToProductPage(page, context,Constants.PRODUCT_URL);
@@ -18,7 +18,7 @@ public class eBayRelatedProductsTest extends TestBase {
 
     }
 
-    @Test
+    @Test(description = "TC_004")
     public void verifyLessThanSixProductsDisplayed(){
         SoftAssert softAssert = new SoftAssert();
         Product.navigateToProductPage(page,context,Constants.PRODUCT_URL);
@@ -27,7 +27,7 @@ public class eBayRelatedProductsTest extends TestBase {
         softAssert.assertEquals(Product.getSimilarProductCount(page,context)<6,"true","Six Similar Products or More than six similar products are displayed ");
     }
 
-    @Test
+    @Test(description = "TC_007")
     public void verifySimilarProductsInSamePriceRange(){
         SoftAssert softAssert = new SoftAssert();
         Product.navigateToProductPage(page,context,Constants.PRODUCT_URL);
@@ -40,7 +40,7 @@ public class eBayRelatedProductsTest extends TestBase {
 
     }
 
-    @Test
+    @Test(description = "TC_0011")
     public void verifySuccessfulNavigationToSimilarProduct(){
         SoftAssert softAssert = new SoftAssert();
         Product.navigateToProductPage(page,context,Constants.PRODUCT_URL);
@@ -55,7 +55,7 @@ public class eBayRelatedProductsTest extends TestBase {
 
     }
 
-    @Test
+    @Test(description = "TC_002")
     public void verifyMainProductCategoryMatchesSimilarProductCategory(){
         SoftAssert softAssert = new SoftAssert();
         Product.navigateToProductPage(page,context,Constants.PRODUCT_URL);
